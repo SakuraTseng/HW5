@@ -1,0 +1,113 @@
+string Name;
+string Gender;
+string Birth;
+string ID;
+string TF = "";
+string req = "";
+
+Console.WriteLine("============================");
+Console.WriteLine("歡迎使用學生基本資料輸入系統");
+Console.WriteLine("============================");
+Console.WriteLine("請輸入姓名:");
+Name = Console.ReadLine();
+Console.WriteLine("你的名字是" + Name);
+
+Console.WriteLine("----------------------------");
+Console.WriteLine("請輸入性別: (1)男生 (2)女生");
+Gender = Console.ReadLine();
+
+switch(Gender)
+{
+    case"1":
+        Gender = "是男生";
+        break;
+    case"2":
+        Gender = "是女生";
+        break;
+    default:
+        Gender = "不明";
+        break;
+}
+Console.WriteLine("你的性別" + Gender);
+
+Console.WriteLine("----------------------------");
+Console.WriteLine("請輸入出生年月日:");
+Birth = Console.ReadLine();
+Console.WriteLine("你的出生年月日是" + Birth);
+
+Console.WriteLine("----------------------------");
+Console.WriteLine("請輸入學號:");
+ID = Console.ReadLine();
+Console.WriteLine("你的學號是" + ID);
+
+for(TF="";TF != "1";)
+{
+    Console.WriteLine("============================");
+    Console.WriteLine("你的基本資料:");
+    Console.WriteLine("名字 "+Name);
+    Console.WriteLine("性別 "+Gender);
+    Console.WriteLine("出生年月日 "+Birth);
+    Console.WriteLine("學號 "+ID);
+    Console.WriteLine(" ");
+    Console.WriteLine("請確認資料都正確嗎? (1)正確 (2)再修改");
+    TF = Console.ReadLine();
+    if(TF == "2")
+    {
+        Console.WriteLine("哪裡填錯了?");
+        Console.WriteLine("(1)姓名 (2)性別 (3)出生年月日 (4)學號");
+
+        req = Console.ReadLine();
+
+        if(req == "1")
+        {
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("請輸入姓名:");
+            Name = Console.ReadLine();
+            Console.WriteLine("你的名字是" + Name);
+        }
+
+        else if(req == "2")
+        {
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("請輸入性別: (1)男生 (2)女生");
+            Gender = Console.ReadLine();
+
+            switch(Gender)
+            {
+                case"1":
+                    Gender = "是男生";
+                    break;
+                case"2":
+                    Gender = "是女生";
+                    break;
+                default:
+                    Gender = "不明";
+                    break;
+            }
+            Console.WriteLine("你的性別" + Gender);
+        }
+
+        else if(req == "3")
+        {
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("請輸入出生年月日:");
+            Birth = Console.ReadLine();
+            Console.WriteLine("你的出生年月日是" + Birth);
+        }
+
+        else if(req == "4")
+        {
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("請輸入學號:");
+            ID = Console.ReadLine();
+            Console.WriteLine("你的學號是" + ID);
+        }
+    }
+
+    else if(TF == "1")
+    {
+        Console.WriteLine("============================");
+        Console.WriteLine("         謝謝填寫          ");
+        Console.WriteLine("============================");
+    }
+}
